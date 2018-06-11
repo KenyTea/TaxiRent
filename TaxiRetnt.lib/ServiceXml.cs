@@ -24,7 +24,7 @@ namespace TaxiRetnt.lib
         public void XmlDocument(string path)
         {
 
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate)
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
 
             }
