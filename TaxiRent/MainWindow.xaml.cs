@@ -22,6 +22,7 @@ namespace TaxiRent
     {
         public MainWindow()
         {
+
             InitializeComponent();
             //BaseGrid.Background = new ImageSource(new ImageSource()
         }
