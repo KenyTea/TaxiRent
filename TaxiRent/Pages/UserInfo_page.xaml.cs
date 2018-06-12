@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TaxiRetnt.lib;
+using TaxiRetnt.lib.Modules;
 
 namespace TaxiRent.Pages
 {
@@ -21,10 +22,12 @@ namespace TaxiRent.Pages
     /// </summary>
     public partial class UserInfo_page : Page
     {
+        public List<Tdl_User> users { get; set; }
         public UserInfo_page()
         {
             InitializeComponent();
             ServiceXml sx = new ServiceXml();
+            users = sx.getUserss();
         }
 
 
