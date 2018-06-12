@@ -70,7 +70,7 @@ namespace TaxiRetnt.lib
             catch (Exception ex)
             {
                 massage = ex.Message;
-                throw;
+                return false;
             }    
         }
 

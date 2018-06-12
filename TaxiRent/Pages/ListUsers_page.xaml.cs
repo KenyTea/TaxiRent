@@ -10,25 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TaxiRent
+namespace TaxiRent.Pages
 {
     /// <summary>
-    /// Interaction logic for AdminWindow.xaml
+    /// Interaction logic for ListUsers.xaml
     /// </summary>
-    public partial class AdminWindow : Window
+    public partial class ListUsers : Page
     {
-        public static Frame mf;
-        public AdminWindow()
+        public ListUsers()
         {
             InitializeComponent();
-            mf = mainFrame;
-        }
-
-        private void miAddUser_Click(object sender, RoutedEventArgs e)
-        {
-            mainFrame.Source = new Uri("Pages/AddUser_page.xaml", UriKind.RelativeOrAbsolute);
         }
     }
 }
