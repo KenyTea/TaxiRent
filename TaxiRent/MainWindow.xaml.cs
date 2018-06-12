@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaxiRetnt.lib;
 
 namespace TaxiRent
 {
@@ -25,6 +26,17 @@ namespace TaxiRent
 
             InitializeComponent();
             //BaseGrid.Background = new ImageSource(new ImageSource()
+        }
+
+        private void btnLogOn_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceXml service = new ServiceXml("user.xml");
+            if(service.GetUser(txbLogin.Text, txbPassword.Password))
+            {
+                AdminWindow aw = new AdminWindow();
+                aw.Show();
+                this.Close();
+            }
         }
     }
 }
