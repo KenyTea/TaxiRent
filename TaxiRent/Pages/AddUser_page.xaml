@@ -8,7 +8,44 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="AddUser_page">
 
-	<Grid>
-		<Label Content="Add User" FontSize="24"></Label>
+	<Grid Margin="5">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		
+		<Label Content="Add User" FontSize="14" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+		<Label Content="Фамилия" Grid.Row="1" Grid.Column="0"></Label>
+		<TextBox x:Name="tbFName"  Grid.Row="1" Grid.Column="1"></TextBox>
+		
+		<Label Content="Имя" Grid.Row="2" Grid.Column="0"></Label>
+		<TextBox x:Name="tbLName"  Grid.Row="2" Grid.Column="1"></TextBox>
+
+		<Label Content="Дата рождения" Grid.Row="4" Grid.Column="0"></Label>
+		<DatePicker x:Name="dpDob"  Grid.Row="4" Grid.Column="1"></DatePicker>
+
+		<Label Content="Пол" Grid.Row="5" Grid.Column="0"></Label>
+		<ComboBox x:Name="ldGender"  Grid.Row="5" Grid.Column="1">
+			<ComboBoxItem Content="M" x:Name="M"></ComboBoxItem>
+			<ComboBoxItem Content="Ж" x:Name="F"></ComboBoxItem>
+		</ComboBox>
+
+		<Label x:Name="ErrorMessage" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+		<Button x:Name="AddUser" Grid.Row="7" Grid.Column="1" Content="Добавить" Click="AddUser_Click"></Button>
 	</Grid>
+	
 </Page>

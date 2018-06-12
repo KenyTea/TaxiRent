@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaxiRent.Modules;
 
 namespace TaxiRent.Pages
 {
@@ -20,9 +21,20 @@ namespace TaxiRent.Pages
     /// </summary>
     public partial class AddUser_page : Page
     {
+        Random r = new Random();
         public AddUser_page()
         {
             InitializeComponent();
+        }
+
+        private void AddUser_Click(object sender, RoutedEventArgs e)
+        {
+            Tdl_User user = new Tdl_User();
+            user.Id = r.Next();
+            user.Name = string.Format("{0}_{1}", tbFName.Text, tbLName.Text.Substring(0, 1));
+            user.Password = r.Next().ToString();
+            user.DateOfBirsday = (DateTime)dpDob.SelectedDate;
+            user.Gender = (Gender)(ldGender.SelectedIndex);
         }
     }
 }

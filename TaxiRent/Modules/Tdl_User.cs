@@ -7,6 +7,7 @@ using TaxiRent.Modules;
 
 namespace TaxiRent.Modules
 {
+    public enum Gender { m = 0, f}
     public class Tdl_User
     {
         public string Name { get; set; }
@@ -14,6 +15,8 @@ namespace TaxiRent.Modules
         public string Email { get; set; }
         public int Department { get; set; }
         public string Password { get; set; }
+        public DateTime DateOfBirsday { get; set; }
+        public Gender Gender { get; set; }
 
         public List<Tdl_Roles> Roles { get; set; }
     }
