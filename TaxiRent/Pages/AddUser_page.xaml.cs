@@ -49,7 +49,7 @@ namespace TaxiRent.Pages
             {
                 ErrorMessage.Foreground = new SolidColorBrush(Colors.Green);
                 ErrorMessage.Content = massage;
-                Thread.Sleep(3000);
+                Thread.Sleep(2000);
                 AdminWindow.mf.Source = new Uri("Pages/ListUsers_page.xaml", UriKind.RelativeOrAbsolute);
                 
             }

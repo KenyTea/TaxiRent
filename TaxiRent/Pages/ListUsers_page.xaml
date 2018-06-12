@@ -9,6 +9,6 @@
       Title="ListUsers">
 
     <Grid>
-		<Label x:Name="uuu"></Label>
+		<Label x:Name="uuu" Content="5555"></Label>
     </Grid>
 </Page>
