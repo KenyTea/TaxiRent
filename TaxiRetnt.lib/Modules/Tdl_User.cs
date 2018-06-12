@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaxiRent.Modules;
 
-namespace TaxiRent.Modules
+
+namespace TaxiRetnt.lib.Modules
 {
+    [Serializable]
     public enum Gender { m = 0, f}
     public class Tdl_User
     {

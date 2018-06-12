@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
+using TaxiRetnt.lib.Modules;
 
 namespace TaxiRetnt.lib
 {
@@ -52,5 +54,25 @@ namespace TaxiRetnt.lib
         {
             return true;
         }
+
+        public bool AddUsers(Tdl_User user, out string massage)
+        {
+            try
+            {
+                XmlSerializer formatter = new XmlSerializer(typeof(Tdl_User));
+                using (FileStream fs = new FileStream("users/" + user.Name + ".xml", FileMode.OpenOrCreate))
+                {
+                    formatter.Serialize(fs, user);
+                }
+                massage = "Пользователь добавлен";
+                return true;
+            }
+            catch (Exception ex)
+            {
+                massage = ex.Message;
+                throw;
+            }    
+        }
+
     }
 }

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\Tdl_Roles.cs" />
+    <Compile Include="Modules\Tdl_User.cs" />
     <Compile Include="ServiceXml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

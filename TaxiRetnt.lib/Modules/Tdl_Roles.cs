@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaxiRent.Modules
-{
+namespace TaxiRetnt.lib.Modules
+{[Serializable]
     public class Tdl_Roles
     {
         public int RoleId { get; set; }
