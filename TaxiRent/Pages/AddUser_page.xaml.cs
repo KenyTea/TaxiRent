@@ -50,8 +50,8 @@ namespace TaxiRent.Pages
                 ErrorMessage.Foreground = new SolidColorBrush(Colors.Green);
                 ErrorMessage.Content = massage;
                 Thread.Sleep(3000);
-                AdminWindow aw = new AdminWindow();
-                aw.mainFrame.Source = new Uri("Pages/ListUsers_page.xaml", UriKind.RelativeOrAbsolute);
+                AdminWindow.mf.Source = new Uri("Pages/ListUsers_page.xaml", UriKind.RelativeOrAbsolute);
+                
             }
         }
     }
