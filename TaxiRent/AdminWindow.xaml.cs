@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaxiRetnt.lib;
 
 namespace TaxiRent
 {
@@ -29,6 +30,12 @@ namespace TaxiRent
         private void miAddUser_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Source = new Uri("Pages/AddUser_page.xaml", UriKind.RelativeOrAbsolute);
+        }
+
+        private void miUserInfo_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceXml sx = new ServiceXml();
+            sx.getUserss();
         }
     }
 }

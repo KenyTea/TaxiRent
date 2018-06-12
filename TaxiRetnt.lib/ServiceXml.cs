@@ -74,5 +74,24 @@ namespace TaxiRetnt.lib
             }    
         }
 
+
+        public List<Tdl_User> getUserss()
+        {
+            List<Tdl_User> users = new List<Tdl_User>();
+            DirectoryInfo di = new DirectoryInfo("users");
+            foreach (FileInfo item in di.GetFiles())
+            {
+                XmlSerializer formatter = new XmlSerializer(typeof(Tdl_User));
+
+                using (FileStream fs = new FileStream(item.FullName, FileMode.Open))
+                {
+                    users.Add((Tdl_User)formatter.Deserialize(fs));
+                }
+            }
+            return users;
+
+        }
+
     }
+
 }
